@@ -12,40 +12,51 @@
             padding: 0 0 15px 0;
         }
 
+        .block-item:last-child {
+            padding: 0 0 70px 0;
+        }
+
         .big-title {
             font-size: 32px;
             font-weight: 600;
             line-height: 36px;
             text-align: center;
         }
+
         .card-block {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
             .card-element {
                 position: relative;
                 padding: 25px;
+
                 .card-element__header {
                     display: flex;
                     justify-content: space-between;
                     margin-bottom: 12px;
                     color: black;
+
                     .card-element__header-title {
                         font-size: 26px;
                         letter-spacing: 0.5;
                     }
+
                     .card-element__icon {
                         padding: 4px;
                         opacity: 0.5;
+
                         img {
                             height: 24px;
                             width: 24px;
                         }
+
                         img:last-child {
                             display: none;
                         }
                     }
                 }
-    
+
                 .card-element__description {
                     min-height: 130px;
                     font-size: 18px;
@@ -53,18 +64,22 @@
                     letter-spacing: 0.5;
                     text-align: justify;
                 }
+
                 .card-element__number {
                     margin-top: 30px;
                     font-size: 58px;
                     line-height: 1.1;
+
                     span {
                         font-size: 34px;
                     }
                 }
+
                 .card-element__specification {
                     font-size: 16px;
                     line-height: 1.5;
                 }
+
                 .card-element__border {
                     position: absolute;
                     top: 0;
@@ -72,6 +87,7 @@
                     width: 100%;
                     height: 100%;
                 }
+
                 .card-element__border::before {
                     content: "";
                     position: absolute;
@@ -83,6 +99,7 @@
                     background-color: var(--gray_200);
                 }
             }
+
             .card-element::before,
             .card-element::after {
                 content: "";
@@ -93,28 +110,36 @@
                 height: 1px;
                 background-color: var(--gray_200);
             }
+
             .card-element::before {
                 top: 0;
             }
+
             .card-element::after {
                 bottom: 0;
             }
+
             .card-element:nth-child(3n) {
                 .card-element__border::before {
                     display: none;
                 }
             }
+
             .card-element:hover {
                 a.card-element__header:hover {
                     cursor: pointer;
+
                     .card-element__header-title {
                         color: var(--azure_a100);
                     }
+
                     .card-element__icon {
                         opacity: 1;
+
                         img:first-child {
                             display: none;
                         }
+
                         img:last-child {
                             display: block;
                         }
@@ -133,11 +158,13 @@ body.theme-dark {
             .big-title {
                 color: var(--steel_gray_10);
             }
+
             .card-block {
                 .card-element {
                     .card-element__header {
                         color: var(--steel_gray_10);
                     }
+
                     .card-element__description {
                         color: var(--steel_gray_10);
                     }
@@ -148,3 +175,21 @@ body.theme-dark {
 }
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- АДАПТАЦИЯ ------- ----- ----- ----- */
+
+@media (max-width: 740px) {
+    .body {
+        .about {
+            .card-block {
+                grid-template-columns: repeat(1, 1fr);
+
+                .card-element__border::before {
+                    display: none;
+                }
+
+                .card-element:not(:last-child)::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,19 +1,93 @@
 /*Обнуление*/
-*{padding: 0;margin: 0;border: 0;}
-*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-nav,footer,header,aside{display: block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:16px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
-input,button,textarea{font-family:inherit;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a,a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 /*--------------------*/
 
 * {
@@ -157,8 +231,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     --lavender_900: #262b4d;
 }
 
+body {
+    background: var(--gray_40);
+}
+
 .content {
-    height: 100%;
 
     header {
         height: 49px;
@@ -232,6 +309,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
                         height: 32px;
                         width: 32px;
                         fill: var(--azure_a100);
+
                         path {
                             fill: var(--azure_a100);
                         }
@@ -247,7 +325,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
     .body {
         height: calc(100% - 90px);
-        background: var(--gray_40);
     }
 
     footer {
@@ -305,6 +382,7 @@ body.theme-dark {
                         color: var(--steel_gray_40);
                     }
                 }
+
                 .header__navigation {
                     .header__navigation__item {
                         color: var(--steel_gray_40);
@@ -323,6 +401,7 @@ body.theme-dark {
                     .header__buttons_item {
                         svg {
                             fill: var(--steel_gray_100);
+
                             path {
                                 fill: var(--steel_gray_100);
                             }
@@ -351,3 +430,52 @@ body.theme-dark {
 
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- АДАПТАЦИЯ ------- ----- ----- ----- */
+
+@media (max-width: 740px) {
+    .content {
+        header {
+            height: 40px;
+            .header {
+                max-width: 100%;
+                padding: 0 10px;
+
+                .header__project {
+                    .header__project_designation {
+                        display: none;
+                    }
+                }
+
+                .header__navigation {
+                    .header__navigation__item:not(.link) {
+                        display: none;
+                    }
+                    .link {
+                        font-weight: 600;
+                        color: #2787f5;
+                        border-bottom: 0;
+                    }
+                }
+
+                .header__buttons {
+                    .header__buttons_item {
+                        height: 24px;
+                        width: 24px;
+
+                        svg {
+                            height: 24px;
+                            width: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .body {
+            height: 100% !important;
+        }
+
+        footer {
+            display: none;
+        }
+    }
+}
