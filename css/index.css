@@ -1,0 +1,150 @@
+.body {
+    .about {
+        height: 100%;
+        max-width: 1198px;
+        margin: 0 auto;
+        padding: 0 20px;
+        font-family: Roboto, sans-serif;
+        overflow: hidden;
+
+        .block-item {
+            margin: 35px 0 0 0;
+            padding: 0 0 15px 0;
+        }
+
+        .big-title {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 36px;
+            text-align: center;
+        }
+        .card-block {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            .card-element {
+                position: relative;
+                padding: 25px;
+                .card-element__header {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    color: black;
+                    .card-element__header-title {
+                        font-size: 26px;
+                        letter-spacing: 0.5;
+                    }
+                    .card-element__icon {
+                        padding: 4px;
+                        opacity: 0.5;
+                        img {
+                            height: 24px;
+                            width: 24px;
+                        }
+                        img:last-child {
+                            display: none;
+                        }
+                    }
+                }
+    
+                .card-element__description {
+                    min-height: 130px;
+                    font-size: 18px;
+                    line-height: 26px;
+                    letter-spacing: 0.5;
+                    text-align: justify;
+                }
+                .card-element__number {
+                    margin-top: 30px;
+                    font-size: 58px;
+                    line-height: 1.1;
+                    span {
+                        font-size: 34px;
+                    }
+                }
+                .card-element__specification {
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+                .card-element__border {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .card-element__border::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 94%;
+                    background-color: var(--gray_200);
+                }
+            }
+            .card-element::before,
+            .card-element::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 94%;
+                height: 1px;
+                background-color: var(--gray_200);
+            }
+            .card-element::before {
+                top: 0;
+            }
+            .card-element::after {
+                bottom: 0;
+            }
+            .card-element:nth-child(3n) {
+                .card-element__border::before {
+                    display: none;
+                }
+            }
+            .card-element:hover {
+                a.card-element__header:hover {
+                    cursor: pointer;
+                    .card-element__header-title {
+                        color: var(--azure_a100);
+                    }
+                    .card-element__icon {
+                        opacity: 1;
+                        img:first-child {
+                            display: none;
+                        }
+                        img:last-child {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ТЁМНАЯ ТЕМА ----- ----- ----- ----- */
+
+body.theme-dark {
+    .body {
+        .about {
+            .big-title {
+                color: var(--steel_gray_10);
+            }
+            .card-block {
+                .card-element {
+                    .card-element__header {
+                        color: var(--steel_gray_10);
+                    }
+                    .card-element__description {
+                        color: var(--steel_gray_10);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- АДАПТАЦИЯ ------- ----- ----- ----- */
