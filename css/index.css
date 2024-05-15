@@ -8,7 +8,7 @@
         overflow: hidden;
 
         .block-item {
-            margin: 35px 0 0 0;
+            margin: 25px 0 0 0;
             padding: 0 0 15px 0;
         }
 
@@ -147,6 +147,50 @@
                 }
             }
         }
+
+        .guide {
+            display: flex;
+            width: 100%;
+
+            .guide__attachment {
+                iframe, img {
+                    border: 2px solid var(--gray_400);
+                    border-radius: 8px;
+                    width: 640px;
+                    height: 360px;
+                }
+            }
+
+            .guide__about {
+                width: inherit;
+                padding: 0 20px;
+                font-size: 18px;
+                line-height: 26px;
+                letter-spacing: 0.5;
+                text-align: justify;
+
+                .guide_ul {
+                    margin: 10px 0;
+                    li {
+                        font {
+                            color: red;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: var(--azure_a100)!important;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+        }
+
+        .block-hr-gray {
+            margin: 20px 0 0 0;
+            border: 1px solid var(--gray_200);
+        }
     }
 }
 
@@ -170,6 +214,10 @@ body.theme-dark {
                     }
                 }
             }
+
+            .guide {
+                color: var(--steel_gray_10);
+            }
         }
     }
 }
@@ -188,6 +236,26 @@ body.theme-dark {
 
                 .card-element:not(:last-child)::after {
                     display: none;
+                }
+            }
+
+            .guide {
+                display: block;
+
+                .guide__attachment {
+                    iframe, img {
+                        width: 100%;
+                        height: 200px;
+                    }
+                }
+
+                .guide__about {
+                    width: 100%;
+                    padding: 20px 0 0 0;
+                }
+                
+                div:not(.guide__attachment):first-child {
+                    padding: 0 0 20px 0;
                 }
             }
         }

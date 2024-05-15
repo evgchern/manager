@@ -412,7 +412,7 @@ body.theme-dark {
         }
 
         .body {
-            background: var(--gray_900);
+            background: var(--gray_850);
         }
 
         footer {
@@ -452,7 +452,7 @@ body.theme-dark {
                     .link {
                         font-weight: 600;
                         color: #2787f5;
-                        border-bottom: 0;
+                        border-bottom: 0!important;
                     }
                 }
 
