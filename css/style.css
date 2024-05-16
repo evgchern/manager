@@ -231,6 +231,135 @@ h6 {
     --lavender_900: #262b4d;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type="checkbox"]+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+input[type="checkbox"]+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+input[type="checkbox"]:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+}
+
+input[type="checkbox"]:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+input[type="checkbox"]:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+input[type="checkbox"]:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+}
+
+input[type="checkbox"]:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+input[type="checkbox"]:disabled+label::before {
+    background-color: #e9ecef;
+}
+
+input[type="radio"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type="radio"]+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+input[type="radio"]+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+input[type="radio"]:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+}
+
+input[type="radio"]:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+input[type="radio"]:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+input[type="radio"]:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+}
+
+input[type="radio"]:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+input[type="radio"]:disabled+label::before {
+    background-color: #e9ecef;
+}
+
 body {
     background: var(--gray_40);
 }
@@ -368,6 +497,539 @@ body {
     }
 }
 
+body {
+    background: #edeef0;
+    height: auto;
+
+    .body__content {
+        header {
+            font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
+            background: #fff;
+            position: fixed;
+            top: 0;
+            height: 50px;
+            width: 100%;
+
+            .header {
+                margin: auto;
+                width: 96%;
+                height: 100%;
+
+                .header__1 {
+                    float: left;
+                }
+
+                .header__2 {
+                    float: right;
+
+                    .header__2__item {
+                        margin: 9px 0 9px 0;
+
+                        .header__2__item__block {
+                            float: left;
+                            margin-top: -1px;
+                        }
+
+                        .header__2__item__setting {
+                            float: right;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+
+            .ava {
+                float: left;
+                padding: 5px;
+                margin-top: 10px;
+                margin-left: 5px;
+                background-image: url(../img/vk.png);
+                background-size: auto 30px;
+                height: 30px;
+                width: 30px;
+
+                img {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+
+            .name_text_block {
+                padding-top: 10px;
+                padding-bottom: 5px;
+                margin-left: 46px;
+
+                .name_text {
+                    left: 460px;
+                    top: 10px;
+                    bottom: 0px;
+                    right: 0px;
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: #2a5885;
+                }
+
+                .name_text_2 {
+                    color: #939393;
+                    top: 24px;
+                    padding-top: 1px;
+                }
+            }
+        }
+
+        .tb-content {
+            font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
+            margin: 20px auto auto auto;
+            width: 96%;
+
+            .tb-content_table {
+                .table {
+                    border: 1px solid #000;
+                    border-radius: 8px;
+                    max-width: 100%;
+                    overflow: hidden;
+
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+
+                        tr {
+                            background: #fff;
+                            font-size: 15px;
+                            line-height: 20px;
+
+                            th,
+                            td {
+                                padding: 6px 9px;
+                                border-right: 1px solid #000;
+                            }
+
+                            td {
+                                border-top: 1px solid #000;
+                                text-align: center;
+                            }
+
+                            td:nth-child(1) {
+                                width: 36px;
+                            }
+
+                            td:nth-child(2),
+                            td:nth-child(6) {
+                                width: 12%;
+                            }
+
+                            td:nth-child(3),
+                            td:nth-child(4),
+                            td:nth-child(5) {
+                                width: 10%;
+                            }
+
+                            th:nth-child(8),
+                            td:nth-child(8),
+                            th:nth-child(9),
+                            td:nth-child(9) {
+                                div {
+                                    text-align: center;
+                                    width: 22px;
+                                    height: 22px;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+
+                            td:nth-child(8):hover,
+                            td:nth-child(9):hover {
+                                background: #dedcf7;
+                                cursor: pointer;
+                                transition: all 1s ease 0s;
+                            }
+
+                            th:nth-child(8),
+                            td:nth-child(8) {
+                                div {
+                                    background-image: url(../img/replay_24.svg);
+                                }
+                            }
+
+                            th:nth-child(9),
+                            td:nth-child(9) {
+                                div {
+                                    background-image: url(../img/delete_outline_24.svg);
+                                }
+                            }
+
+                            th:nth-child(8),
+                            th:nth-child(9),
+                            td:nth-child(8),
+                            td:nth-child(9) {
+                                width: 42px;
+                                max-width: 42px;
+                            }
+
+                            th:last-child,
+                            td:last-child {
+                                border-right: none;
+                            }
+                        }
+
+                        tbody:nth-child(2n+1) tr {
+                            background: #E5E5E5;
+                        }
+
+                        tbody:nth-child(1) tr {
+                            background: #fcf4e3;
+                        }
+                    }
+                }
+            }
+
+            .tb-content_button {
+                margin-top: 20px;
+
+                .buttons {
+                    background: #fff;
+                    padding: 12px;
+                    width: 100%;
+                    border-radius: 8px;
+                    display: flex;
+
+                    button {
+                        flex: 0 1 20%;
+                        margin-right: 8px;
+                        padding: 7px 3px 8px 3px;
+                        background: #e5ebf1;
+                        border-radius: 4px;
+                        text-align: center;
+                        color: #55677d;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    button:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .tb-content_code {
+                .write_code {
+                    display: none;
+                    background: #fff;
+                    width: 100%;
+                    border-radius: 8px;
+                    margin-top: 20px;
+                    padding: 12px;
+
+                    .write_code__info {
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+
+                    .write_code__text {
+                        margin-top: 20px;
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+
+                .read_code {
+                    display: none;
+                    background: #fff;
+                    width: 100%;
+                    border-radius: 8px;
+                    margin-top: 20px;
+                    padding: 12px;
+
+                    div[role="textbox"] {
+                        background: #e5ebf1;
+                        border-radius: 4px;
+                        padding: 12px;
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+
+                    button {
+                        margin-top: 16px;
+                        width: 100%;
+                        background: #e5ebf1;
+                        border-radius: 4px;
+                        padding: 12px;
+                        text-align: center;
+                        color: #55677d;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .body__window {
+        display: none;
+
+        .body__window__window {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            z-index: 5;
+
+            .body__window__window__item {
+                font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
+                margin: 20px auto 20px auto;
+                width: 96%;
+                height: 95%;
+
+                .table {
+                    border: 1px solid #000;
+                    border-radius: 8px;
+                    overflow: auto;
+                    max-height: 90%;
+
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+
+                        tr {
+                            background: #fff;
+                            font-size: 15px;
+                            line-height: 20px;
+
+                            th,
+                            td {
+                                padding: 6px 9px;
+                                border-right: 1px solid #000;
+                            }
+
+                            td {
+                                border-top: 1px solid #000;
+                                text-align: center;
+                            }
+
+                            td:nth-child(1) {
+                                width: 36px;
+                            }
+
+                            td:nth-child(2),
+                            td:nth-child(3),
+                            td:nth-child(4),
+                            td:nth-child(5) {
+                                width: 14%;
+                            }
+
+                            th:last-child,
+                            td:last-child {
+                                border-right: none;
+                            }
+                        }
+
+                        tbody:nth-child(2n+1) tr {
+                            background: #E5E5E5;
+                        }
+
+                        tbody:nth-child(1) tr {
+                            background: #fcf4e3;
+                        }
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    margin-top: 20px;
+                    padding: 8px 3px 9px 3px;
+                    background: #e5ebf1;
+                    border-radius: 4px;
+                    text-align: center;
+                    color: #55677d;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .body__window2 {
+        display: none;
+
+        .body__window2__window {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            z-index: 5;
+
+            .body__window2__window__item {
+                font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
+                margin: 20px auto 20px auto;
+                width: 96%;
+                height: 95%;
+
+                .password {
+                    width: 35%;
+                    margin: 15% auto auto auto;
+                    background: #fff;
+                    border-radius: 8px;
+                    border: 1px solid #dce1e6;
+                    padding: 25px;
+
+                    .password__title {
+                        padding: 0px 9px 25px 9px;
+                        text-align: center;
+                        font-size: 21px;
+                        line-height: 25px;
+                        font-weight: 700;
+                    }
+
+                    .password__content {
+                        input {
+                            width: 100%;
+                            margin-bottom: 22px;
+                            border: 1px solid #d3d9de;
+                            border-radius: 6px;
+                            padding: 7px 8px 8px 7px;
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+
+                        button {
+                            width: 100%;
+                            padding: 7px 3px 8px 3px;
+                            background: #e5ebf1;
+                            border-radius: 4px;
+                            text-align: center;
+                            color: #55677d;
+                            font-size: 14px;
+                            line-height: 19px;
+                            margin-bottom: 22px;
+                        }
+
+                        .reset {
+                            display: none;
+                        }
+
+                        .password__content__text {
+                            text-align: center;
+                            color: #626d7a;
+                            font-size: 11px;
+                            line-height: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .body__window3 {
+        display: none;
+
+        .body__window3__window {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            z-index: 5;
+
+            .body__window3__window__item {
+                font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
+                margin: 20px auto 20px auto;
+                width: 96%;
+                height: 95%;
+
+                .settings {
+                    width: 55%;
+                    margin: 8% auto auto auto;
+                    background: #fff;
+                    border-radius: 8px;
+                    border: 1px solid #dce1e6;
+                    padding: 25px;
+
+                    .settings__item {
+                        border-bottom: 2px solid #dce1e6;
+                        margin-bottom: 20px;
+
+                        .settings__item__title {
+                            font-size: 16px;
+                            padding-left: 1px;
+                            line-height: 19px;
+                            font-weight: 600;
+                        }
+
+                        .settings__item__content {
+                            margin-top: 12px;
+                            padding-bottom: 12px;
+
+                            .settings__item__content-input {
+                                width: 100%;
+
+                                input {
+                                    width: 100%;
+                                    border: 1px solid #d3d9de;
+                                    border-radius: 6px;
+                                    padding: 7px 8px 8px 7px;
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                }
+
+                                .radio {
+                                    margin-bottom: 8px;
+                                }
+
+                                .radio:last-child {
+                                    margin-bottom: 0;
+                                }
+
+                                label {
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                    width: 100%;
+
+                                    span {
+                                        color: #7e868c;
+                                    }
+                                }
+                            }
+
+                            .content-input2 {
+                                width: 100%;
+                                float: unset;
+                            }
+
+                            .exit_settings {
+                                width: 100%;
+                                padding: 7px 3px 8px 3px;
+                                background: #e5ebf1;
+                                border: 1px solid #d3d9de;
+                                border-radius: 4px;
+                                text-align: center;
+                                color: #55677d;
+                                font-size: 14px;
+                                line-height: 19px;
+                            }
+                        }
+                    }
+
+                    .settings__item:last-child {
+                        margin-bottom: 0;
+                        border-bottom: 0;
+
+                        .settings__item__content {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ТЁМНАЯ ТЕМА ----- ----- ----- ----- */
 
 body.theme-dark {
@@ -435,6 +1097,7 @@ body.theme-dark {
     .content {
         header {
             height: 40px;
+
             .header {
                 max-width: 100%;
                 padding: 0 10px;
@@ -447,12 +1110,13 @@ body.theme-dark {
 
                 .header__navigation {
                     .header__navigation__item:not(.link) {
-                        display: none;
+                        /*display: none;*/
                     }
+
                     .link {
                         font-weight: 600;
                         color: #2787f5;
-                        border-bottom: 0!important;
+                        border-bottom: 0 !important;
                     }
                 }
 
@@ -476,6 +1140,29 @@ body.theme-dark {
 
         footer {
             display: none;
+        }
+    }
+
+    .content {
+        .body__content {
+            .tb-content {
+                .tb-content_table {
+                    .table {
+                        overflow: auto;
+                    }
+                }
+                .tb-content_button {
+                    .buttons {
+                        display: block;
+
+                        button {
+                            display: block;
+                            width: 100%;
+                            margin: 5px 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
