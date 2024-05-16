@@ -1150,6 +1150,16 @@ body.theme-dark {
                     .table {
                         overflow: auto;
                     }
+                    -moz-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+                        background-color: #c1c1c1;
+                        border-radius: 8px;
+                    }
+                    -moz-webkit-scrollbar, ::-webkit-scrollbar {
+                        background-color: #f1f1f1;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 8px;
+                    }
                 }
                 .tb-content_button {
                     .buttons {
