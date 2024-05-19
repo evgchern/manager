@@ -683,7 +683,7 @@ body {
             }
 
             .tb-content_button {
-                margin-top: 20px;
+                margin: 20px 0;
 
                 .buttons {
                     background: #fff;
