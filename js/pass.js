@@ -44,10 +44,14 @@ function settings() {
 	document.querySelector('#kod-password').value = localStorage.getItem('block_kod');
 }
 
-if (document.location.hash == '#settings') {
-    settings();
-    history.replaceState(null, null, ' ');
+function href_settings() {
+	if (document.location.hash == '#settings') { console.log(localStorage, document.location)
+		settings();
+		history.replaceState(null, null, ' ');
+	}
 }
+
+if(localStorage.getItem('block_state') == 'false') href_settings();
 
 function exit_settings() {
 	localStorage.setItem('block_loading', document.querySelector('#blocked').checked);
@@ -242,6 +246,7 @@ function login() {
 		document.querySelector('.body__content').style.display = 'block';
 		localStorage.setItem('block_state', 'false');
 		table();
+		href_settings();
 	} else {
 		document.querySelector('#kod').style.background = '#faf0f0';
 		document.querySelector('#kod').style.border = '1px solid #ebb0b0';
