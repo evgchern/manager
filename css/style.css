@@ -676,7 +676,7 @@ body {
                         }
 
                         tbody:nth-child(1) tr {
-                            background: #cbdfff;
+                            background: #cbdfff!important;
                         }
                     }
                 }
@@ -691,6 +691,7 @@ body {
                     width: 100%;
                     border-radius: 8px;
                     display: flex;
+                    border: 1px solid var(--gray_300);
 
                     button {
                         flex: 0 1 20%;
@@ -702,6 +703,7 @@ body {
                         color: #55677d;
                         font-size: 14px;
                         line-height: 20px;
+                        border: 1px solid var(--gray_200);
                     }
 
                     button:hover {
@@ -1083,6 +1085,42 @@ body.theme-dark {
             }
         }
 
+        .body__content {
+            .tb-content {
+                .tb-content_table {
+                    .table {
+                        table {
+                            tr {
+                                background: var(--gray_100);
+                            }
+    
+                            tbody:nth-child(2n+1) tr {
+                                background: var(--gray_200);
+                            }
+                        }
+                    }
+                }
+                .tb-content_button {
+                    .buttons {
+                        background: var(--gray_700);
+                        border: 1px solid var(--gray_600);
+
+                        button {
+                            background: var(--gray_600);
+                            color: white;
+                            font-weight: 600;
+                            border: 1px solid var(--gray_500);
+                        }
+
+                        button:hover {
+                            background: var(--gray_500);
+                            border: 1px solid var(--gray_400);
+                        }
+                    }
+                }
+            }
+        }
+
         footer {
             background: var(--gray_750);
             border-top: 1px solid var(--gray_750);
@@ -1090,6 +1128,15 @@ body.theme-dark {
             .footer {
                 .footer_copyright {
                     color: var(--steel_gray_40);
+                }
+            }
+        }
+    }
+    .body__window3 {
+        .body__window3__window {
+            .body__window3__window__item {
+                .settings {
+                    width: 100%;
                 }
             }
         }
