@@ -1132,15 +1132,6 @@ body.theme-dark {
             }
         }
     }
-    .body__window3 {
-        .body__window3__window {
-            .body__window3__window__item {
-                .settings {
-                    width: 100%;
-                }
-            }
-        }
-    }
 }
 
 
@@ -1190,9 +1181,7 @@ body.theme-dark {
         footer {
             display: none;
         }
-    }
-
-    .content {
+        
         .body__content {
             .tb-content {
                 .tb-content_table {
@@ -1281,6 +1270,26 @@ body.theme-dark {
             td:nth-child(6),
             td:nth-child(7) {
                 display: none;
+            }
+        }
+    }
+
+    .body__window2 {
+        .body__window2__window {
+            .body__window2__window__item {
+                .password {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .body__window3 {
+        .body__window3__window {
+            .body__window3__window__item {
+                .settings {
+                    width: 100%;
+                }
             }
         }
     }

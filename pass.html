@@ -57,45 +57,52 @@
         </header>
 
         <div class="body__content">
-			<div class="tb-content">
-				<div class="tb-content_table">
-					<div class="table">
-						<table>
-							<tr>
-								<th>№</th>
-								<th>Имя Фамилия</th>
-								<th>ID</th>
-								<th>Логин</th>
-								<th>Пароль</th>
-								<th>Email</th>
-								<th>Заметки</th>
-								<th><div></div></th>
-								<th><div></div></th>
-							</tr>
-						</table>
-					</div>
-				</div>
-				<div class="tb-content_button">
-					<div class="buttons">
-						<button onclick="new_tr(); return false;">Добавить новую строчку</button>
-						<button onclick="update(); return false;">Сохранить данные</button>
-						<button onclick="seen_table(); return false;">Открыть таблицу</button>
-						<button onclick="write_base(); return false;">Получить копию базы</button>
-						<button onclick="read_base(); return false;">Вставить копию базы</button>
-					</div>
-				</div>
-				<div class="tb-content_code">
-					<div class="write_code">
-						<div class="write_code__info">Скопируйте текст ниже и сохраните на своём устройстве. Никому не показываете данные с этого сайта. Эта функция предназначается для возможности восстановления данных на сайт при их утрате, поскольку они хранятся в настройках браузера на Вашем устройстве.</div>
-						<div class="write_code__text"></div>
-					</div>
-					<div class="read_code">
-						<div class="read_code__text" contenteditable="true" role="textbox" aria-multiline="true"></div>
-						<button onclick="read_code_base(); return false;">Вставить базу данных</button>
-					</div>
-				</div>
-			</div>
-		</div>
+            <div class="tb-content">
+                <div class="tb-content_table">
+                    <div class="table">
+                        <table>
+                            <tr>
+                                <th>№</th>
+                                <th>Имя Фамилия</th>
+                                <th>ID</th>
+                                <th>Логин</th>
+                                <th>Пароль</th>
+                                <th>Email</th>
+                                <th>Заметки</th>
+                                <th>
+                                    <div></div>
+                                </th>
+                                <th>
+                                    <div></div>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tb-content_button">
+                    <div class="buttons">
+                        <button onclick="new_tr(); return false;">Добавить новую строчку</button>
+                        <button onclick="update(); return false;">Сохранить данные</button>
+                        <button onclick="seen_table(); return false;">Открыть таблицу</button>
+                        <button onclick="write_base(); return false;">Получить копию базы</button>
+                        <button onclick="read_base(); return false;">Вставить копию базы</button>
+                    </div>
+                </div>
+                <div class="tb-content_code">
+                    <div class="write_code">
+                        <div class="write_code__info">Скопируйте текст ниже и сохраните на своём устройстве. Никому не
+                            показываете данные с этого сайта. Эта функция предназначается для возможности восстановления
+                            данных на сайт при их утрате, поскольку они хранятся в настройках браузера на Вашем
+                            устройстве.</div>
+                        <div class="write_code__text"></div>
+                    </div>
+                    <div class="read_code">
+                        <div class="read_code__text" contenteditable="true" role="textbox" aria-multiline="true"></div>
+                        <button onclick="read_code_base(); return false;">Вставить базу данных</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="body__window">
@@ -127,7 +134,9 @@
                         <input type="number" id="kod" name="kod" required placeholder="Код-пароль">
                         <button onclick="login(); return false;">Войти</button>
                         <button class="reset" onclick="reset(); return false;">Сбросить данные и войти</button>
-                        <div class="password__content__text">Посещая этот сайт Вы признаете, что делаете это с собственного устройства и просматриваете пользовательский контент добавленный исключительно Вами, исполняя Федеральный закон от 27.07.2006 N 152-ФЗ (ред. от 02.07.2021) "О персональных данных".</div>
+                        <div class="password__content__text">Продолжая, Вы подтверждаете, что персональные данные на данном сайте добавлены и принадлежат исключительно Вам в соответствии с
+                            Федеральным Законом от 27.07.2006 N 152-ФЗ (ред. от 02.07.2021) "О персональных
+                            данных".</div>
                     </div>
                 </div>
             </div>
@@ -150,7 +159,8 @@
                         <div class="settings__item__title">Код-пароль для доступа к сайту</div>
                         <div class="settings__item__content">
                             <div class="settings__item__content-input">
-                                <input type="number" id="kod-password" name="kod-password" required placeholder="Код-пароль">
+                                <input type="number" id="kod-password" name="kod-password" required
+                                    placeholder="Код-пароль">
                             </div>
                         </div>
                     </div>
@@ -180,7 +190,8 @@
                     </div>
                     <div class="settings__item">
                         <div class="settings__item__content">
-                            <button class="exit_settings" onclick="exit_settings(); return false;">Закрыть и сохранить настройки</button>
+                            <button class="exit_settings" onclick="exit_settings(); return false;">Закрыть и сохранить
+                                настройки</button>
                         </div>
                     </div>
                 </div>
