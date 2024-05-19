@@ -1278,7 +1278,7 @@ body.theme-dark {
         .body__window2__window {
             .body__window2__window__item {
                 .password {
-                    width: 100%;
+                    width: 100%!important;
                 }
             }
         }
